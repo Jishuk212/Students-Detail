@@ -12,7 +12,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
-    message: "This is auth app and app running perfectely",
+    message: "This is students-detail app and app running perfectely",
   });
 });
 
