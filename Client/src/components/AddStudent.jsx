@@ -1,6 +1,7 @@
 // import { useReducer } from "react";
 import formDataContext from "../store/formData";
 import { useContext } from "react";
+import { registerStudents } from "../services/studentServices";
 
 const sec = ["A", "B", "C", "D", "E", "F", "G"];
 
@@ -15,8 +16,9 @@ const AddStudent = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    await registerStudents(formData);
     console.log("Student Data:", formData);
     dispatch({ type: "RESET_FORM" });
   };
