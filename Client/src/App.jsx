@@ -12,9 +12,10 @@ function App() {
       <Header></Header>
       <HomePageButton></HomePageButton>
       <Routes>
-        <Route path="/" element={<ShowStudents />}></Route>
-        <Route path="/show-students" element={<ShowStudents />}></Route>
-        <Route path="/add-student" element={<AddStudent />}></Route>
+        <Route path="/" element={<ShowStudents />} />
+        <Route path="/show-students" element={<ShowStudents />} />
+        <Route path="/add-student" element={<AddStudent />} />
+        <Route path="*" element={<ShowStudents />} />
       </Routes>
       <Footer></Footer>
     </>
